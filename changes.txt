@@ -1,0 +1,129 @@
+CHANGES MADE TO BANK ACCOUNT PROGRAM
+
+1. Added New Fields in clientData Structure
+------------------------------------------
+Included:
+- address[30]
+- phone[15]
+
+This allows storing customer address and phone number.
+
+
+2. Added Search Function
+-------------------------
+New function:
+void searchRecord(FILE *fPtr);
+
+Features:
+- Search account using account number
+- Displays:
+  - Account number
+  - Name
+  - Balance
+  - Address
+  - Phone
+
+
+3. Added List Records Function
+-------------------------------
+New function:
+void listRecords(FILE *fPtr);
+
+Features:
+- Displays all existing account records
+- Shows formatted table of:
+  - Account number
+  - Name
+  - Balance
+  - Address
+  - Phone
+
+
+4. Improved Input Validation
+-----------------------------
+Added validations for:
+- Invalid account numbers
+- Invalid balance input
+- Invalid transaction values
+- Invalid names and phone numbers
+
+Also:
+- Restricted account numbers between 1 - 100
+
+
+5. Added Safer File Handling
+-----------------------------
+Improved:
+- fseek() error checking
+- fread() validation
+- File opening handling
+
+Program now avoids crashes due to invalid file operations.
+
+
+6. Enhanced newRecord() Function
+---------------------------------
+Added input support for:
+- Address
+- Phone number
+
+Also:
+- Prevents duplicate account creation
+- Clears input buffer properly
+
+
+7. Enhanced updateRecord() Function
+------------------------------------
+Added:
+- Display of customer details before updating
+- Balance validation to prevent negative balance
+
+
+8. Improved Delete Function
+----------------------------
+Updated:
+deleteRecord()
+
+Features:
+- Checks whether account exists before deleting
+- Displays confirmation message after deletion
+
+
+9. Added Better Menu Options
+-----------------------------
+New menu items:
+5 - search account
+6 - list all accounts
+7 - end program
+
+
+10. Added Text File Export Improvements
+----------------------------------------
+textFile() now exports:
+- Address
+- Phone number
+
+into:
+accounts.txt
+
+with proper formatting.
+
+
+11. Improved User Experience
+-----------------------------
+Added:
+- Cleaner output formatting
+- Proper headings
+- Better error messages
+- Account detail display
+
+
+12. General Code Improvements
+------------------------------
+Improved:
+- Readability
+- Structure initialization
+- Error handling
+- Input cleanup
+
+Program is now more reliable and user friendly.
